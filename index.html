@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-C3-Zero Projects - Home</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./IMG/Gemini_Generated_Image_ad95shad95shad95.png" alt="ESP32-C3-Zero Logo">
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
+
+            <li>
+                <a href="page2.html">Prototype 1</a>
+            </li>
+
+            <li>
+                <a href="page3.html">Prototype 2</a>
+            </li>
+            
+            <li>
+                <a href="page4.html">Final Design</a>
+            </li>
+            <li class="settings-menu">
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="page">
+            <section class="project-description">
+                <h1>ESP32-C3-Zero Chip Cover Overview</h1>
+                <hr>
+                <p>This site documents the chip cover design and explains how the cover protects the ESP32-C3-Zero and the benefits it provides.</p>
+                <p>The chip cover shields the microcontroller from dust, moisture, and accidental contact with conductive materials. It reduces the risk of ESD damage, prevents short circuits from stray wires or debris, and guards delicate components during handling or installation. The cover is designed for secure fastening while allowing easy removal for programming and debugging.</p>
+                <h2>Benefits</h2>
+                <ul>
+                    <li>Physical protection — absorbs impacts and prevents board damage.</li>
+                    <li>Electrical safety — lowers ESD risk and prevents accidental shorts.</li>
+                    <li>Environmental resilience — limits dust and light moisture ingress.</li>
+                    <li>Serviceability — removable design keeps the board accessible for maintenance and updates.</li>
+                    <li>Thermal considerations — vents and material choices balance protection with heat dissipation.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>
+            &copy; 2026 - ESP32-C3-Zero Tech Lab
+        </p>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const btn = document.querySelector('.menu-btn');
+            if (!event.target.closest('.settings-menu')) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

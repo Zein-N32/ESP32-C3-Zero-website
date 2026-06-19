@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - ESP32-C3-Zero Projects</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./IMG/Gemini_Generated_Image_ad95shad95shad95.png" alt="ESP32-C3-Zero Logo">
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="page2.html">Prototype 1</a>
+            </li>
+
+            <li>
+                <a href="page3.html">Prototype 2</a>
+            </li>
+
+            <li>
+                <a href="page4.html">Final Design</a>
+            </li>
+
+            <li class="settings-menu">
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="page">
+            <section class="project-description">
+                <h1>Sitemap</h1>
+
+                <hr>
+
+                <h2>Main Pages</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a> - Introduction to the ESP32-C3-Zero case project
+                    </li>
+                    <li>
+                        <a href="page2.html">Prototype 1</a> - First prototype design and lessons learned
+                    </li>
+                    <li>
+                        <a href="page3.html">Prototype 2</a> - Second prototype improvements and analysis
+                    </li>
+                    <li>
+                        <a href="page4.html">Final Design</a> - Final design iteration
+                    </li>
+                </ul>
+                <h2>Navigation Tips</h2>
+                <p>
+                    Use the main navigation bar at the top to move between pages. The hamburger menu (☰) in the top-right provides quick access to additional resources and information.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 - ESP32-C3-Zero Tech Lab
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const btn = document.querySelector('.menu-btn');
+            if (!event.target.closest('.settings-menu')) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
