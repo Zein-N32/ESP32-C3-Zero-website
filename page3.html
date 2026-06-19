@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-C3-Zero Projects - Home</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./IMG/Gemini_Generated_Image_ad95shad95shad95.png" alt="ESP32-C3-Zero Logo">
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="page2.html">Prototype 1</a>
+            </li>
+
+            <li>
+                <a href="page3.html" class="active">Prototype 2</a>
+            </li>
+            
+            <li>
+                <a href="page4.html">Final Design</a>
+            </li>
+
+            <li class="settings-menu">
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <a href="index.html">Sitemap</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+   <main>
+        <div id="page">
+            <section class="project-description">
+                <h1>Project: ESP32-C3-Zero Case</h1>
+               
+                
+                <hr>
+
+                <h2>Second Prototype</h2>
+                <p>
+                    The <strong>Second Prototype</strong> The second model was much better than the first in terms of durability and the presence of ventilation openings, but it also had some flaws. The chip could not be positioned correctly inside the case, as the pins were very visible outside the base.
+                </p>
+                
+                 <div class="apolo-frame">
+                    <img src="./IMG/P2/Screenshot 2026-06-09 093124.png" width="100%" alt="ESP32-C3-Zero Enclosure 3D Model">
+                </div>
+                <h2>Failure Analysis</h2>
+                <table class="failure-table">
+                    <thead>
+                        <tr>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>USB access, have ventilation, pins are more secured.</td>
+                            <td>Side ventilation was blocked, the lid almost fit, pins are still little bit exposed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="apolo-frame">
+                    <img src="./IMG/P2/Screenshot 2026-06-09 093142.png" width="100%" alt="ESP32-C3-Zero Enclosure 3D Model">
+                    <img src="./IMG/P2/Screenshot 2026-06-09 093150.png" width="100%" alt="ESP32-C3-Zero Enclosure 3D Model">
+                    <img src="./IMG/P2/Screenshot 2026-06-09 093207.png" width="100%" alt="ESP32-C3-Zero Enclosure 3D Model">
+                    <img src="./IMG/P2/Screenshot 2026-06-09 093124.png" width="100%" alt="ESP32-C3-Zero Enclosure 3D Model">
+                </div>
+                <div class="feedback-section">
+                    <h2>Feedback</h2>
+                    <form id="feedbackForm" class="feedback-form">
+                        <label>Name:
+                            <input type="text" name="name" required>
+                        </label>
+                        <label>Email:
+                            <input type="email" name="email">
+                        </label>
+                        <label>Rating:
+                            <select name="rating">
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Good</option>
+                                <option value="3">3 - Okay</option>
+                                <option value="2">2 - Poor</option>
+                                <option value="1">1 - Very Poor</option>
+                            </select>
+                        </label>
+                        <label>Comment:
+                            <textarea name="comment" rows="3" required></textarea>
+                        </label>
+                        <button type="submit">Submit Feedback</button>
+                    </form>
+                    <h3>Feedback Received</h3>
+                    <table id="feedbackTable" class="feedback-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Rating</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="./feedback.js"></script>
+    <script>initFeedback("prototype-2");</script>
+    <footer>
+        <p>
+            &copy; 2026 - ESP32-C3-Zero Tech Lab
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdownMenu');
+            const btn = document.querySelector('.menu-btn');
+            if (!event.target.closest('.settings-menu')) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
