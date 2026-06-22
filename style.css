@@ -43,7 +43,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #8b949e;
+    color: #c9d1d9;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
@@ -151,7 +151,7 @@ main {
 }
 
 .project-description p {
-    color: #8b949e;
+    color: #c9d1d9;
     margin-bottom: 20px;
 }
 
@@ -172,7 +172,7 @@ main {
 .project-description ul {
     margin-left: 20px;
     margin-top: 15px;
-    color: #8b949e;
+    color: #c9d1d9;
 }
 
 .project-description li {
@@ -294,7 +294,7 @@ footer {
 .feedback-form label {
     display: flex;
     flex-direction: column;
-    color: #8b949e;
+    color: #c9d1d9;
 }
 .feedback-form input,
 .feedback-form select,
@@ -334,4 +334,32 @@ footer {
     .feedback-form button {
         width: 100%;
     }
+}
+
+/* Comparison table */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #30363d;
+    padding: 12px;
+    text-align: left;
+    color: #c9d1d9;
+}
+.comparison-table th {
+    background-color: #0d1117;
+    color: #58a6ff;
+    font-weight: 600;
+}
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: #f0f6fc;
+    background-color: #0d1117;
+}
+.comparison-table tbody tr:nth-child(even) {
+    background-color: rgba(30, 30, 30, 0.3);
 }
