@@ -45,7 +45,7 @@
     <main>
         <div id="page">
             <section class="project-description">
-                <h1>ESP32-C3-Zero Chip Cover Overview</h1>
+                <h1>Project: ESP32-C3-Zero Case</h1>
                 <hr>
                 <p>This site documents the chip cover design and explains how the cover protects the ESP32-C3-Zero and the benefits it provides.</p>
                 <p>The chip cover shields the microcontroller from dust, moisture, and accidental contact with conductive materials. It reduces the risk of ESD damage, prevents short circuits from stray wires or debris, and guards delicate components during handling or installation. The cover is designed for secure fastening while allowing easy removal for programming and debugging.</p>
@@ -57,6 +57,96 @@
                     <li>Serviceability — removable design keeps the board accessible for maintenance and updates.</li>
                     <li>Thermal considerations — vents and material choices balance protection with heat dissipation.</li>
                 </ul>
+                <h2>Prototype Comparison</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Prototype 1</th>
+                            <th>Prototype 2</th>
+                            <th>Final Design</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fit & Tolerance</strong></td>
+                            <td>Lid didn't fit well, poor tolerance</td>
+                            <td>Lid almost fits, some gaps</td>
+                            <td>Precise fit with redesigned snap geometry</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ventilation</strong></td>
+                            <td>No ventilation openings</td>
+                            <td>Good ventilation, but blocked on sides</td>
+                            <td>Repositioned vents for optimal airflow</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pin Protection</strong></td>
+                            <td>Pins exposed and unsecured</td>
+                            <td>Pins more secured but slightly exposed</td>
+                            <td>All pins fully enclosed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ease of Printing</strong></td>
+                            <td>Simple design, straightforward printing</td>
+                            <td>Moderate complexity with good results</td>
+                            <td>Optimized geometry for reliable printing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>USB Access</strong></td>
+                            <td>No USB-C access</td>
+                            <td>Full USB access available</td>
+                            <td>User-friendly port access layout</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Durability</strong></td>
+                            <td>Basic protection</td>
+                            <td>Improved durability, better protection</td>
+                            <td>Enhanced durability with reinforced design</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Additional Features</strong></td>
+                            <td>None</td>
+                            <td>None</td>
+                            <td>Mounting holes for installation</td>
+                        </tr>
+                    </tbody>
+                </table>
+                     <div class="feedback-section">
+                    <h2>Feedback</h2>
+                    <form id="feedbackForm" class="feedback-form">
+                        <label>Name:
+                            <input type="text" name="name" required>
+                        </label>
+                        <label>Email:
+                            <input type="email" name="email">
+                        </label>
+                        <label>Which prototype interested you most?
+                            <select name="prototypeInterest">
+                                <option value="">-- Select --</option>
+                                <option value="Prototype 1">Prototype 1</option>
+                                <option value="Prototype 2">Prototype 2</option>
+                                <option value="Final Design">Final Design</option>
+                            </select>
+                        </label>
+                        <label>Comment:
+                            <textarea name="comment" rows="3" required></textarea>
+                        </label>
+                        <button type="submit">Submit Feedback</button>
+                    </form>
+                    <h3>Feedback Received</h3>
+                    <table id="feedbackTable" class="feedback-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Interested In</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
             </section>
         </div>
     </main>
@@ -67,6 +157,8 @@
         </p>
     </footer>
     
+    <script src="./feedback.js"></script>
+    <script>initFeedback("home");</script>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('dropdownMenu');
